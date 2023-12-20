@@ -68,8 +68,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_et81a")
 }],
-"loop": true,
-"name": &"idle",
+"loop": false,
+"name": &"idle_enemy",
 "speed": 16.0
 }]
 
@@ -85,8 +85,10 @@ texture_filter = 1
 position = Vector2(82, 148)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_fv6ei")
-animation = &"idle"
-frame_progress = 0.0242817
+animation = &"idle_enemy"
+autoplay = "idle_enemy"
+frame = 7
+frame_progress = 0.17261
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(80.5, 151)

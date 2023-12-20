@@ -196,7 +196,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"double_jump",
-"speed": 20.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -353,8 +353,9 @@ texture_filter = 1
 position = Vector2(52, 556)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_fhf2f")
-animation = &"double_jump"
+animation = &"run"
 autoplay = "idle"
+frame_progress = 0.934842
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(53.5, 559.5)
