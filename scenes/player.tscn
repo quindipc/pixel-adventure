@@ -345,6 +345,7 @@ size = Vector2(53, 73)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(-25, 9)
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_i5luy")
 metadata/_edit_group_ = true
 

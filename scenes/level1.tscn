@@ -566,6 +566,10 @@ position = Vector2(4064, 111)
 [node name="Collectable24" parent="SceneObjects/Collectables group" instance=ExtResource("4_5ihur")]
 position = Vector2(4264, 98)
 
+[node name="Collectable25" parent="SceneObjects/Collectables group" instance=ExtResource("4_5ihur")]
+position = Vector2(159.001, 561)
+scale = Vector2(2.5, 2.5)
+
 [node name="Finish" parent="SceneObjects" instance=ExtResource("6_e6xff")]
 texture_filter = 1
 position = Vector2(4273, 277)
