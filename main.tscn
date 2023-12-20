@@ -496,4 +496,5 @@ position = Vector2(680, 248)
 position = Vector2(1096, 384)
 
 [node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("5_0edbg")
