@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cvy2txqjqv4hq" path="res://assets/Pink.png" id="1_2f6yb"]
 [ext_resource type="Texture2D" uid="uid://gtcsc61qf7rk" path="res://assets/Terrain (16x16).png" id="2_s35f5"]
 [ext_resource type="PackedScene" uid="uid://ci0n4dmrwoijw" path="res://scenes/player.tscn" id="3_ipvsf"]
-[ext_resource type="PackedScene" uid="uid://yw8a26llknm8" path="res://scenes/enemy.tscn" id="4_qt85d"]
-[ext_resource type="Script" path="res://scenes/enemy.gd" id="5_1lf2v"]
+[ext_resource type="PackedScene" uid="uid://ccc0egochv2or" path="res://scenes/collectable.tscn" id="4_5ihur"]
+[ext_resource type="Script" path="res://game_manager.gd" id="5_0edbg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mdtb2"]
 texture = ExtResource("2_s35f5")
@@ -465,11 +465,8 @@ sources/0 = SubResource("TileSetAtlasSource_mdtb2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 1162.0
+offset_bottom = 608.0
 texture = ExtResource("1_2f6yb")
 stretch_mode = 1
 
@@ -486,6 +483,17 @@ position = Vector2(-26, 6)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(30, 572)
 
-[node name="Enemy" parent="." instance=ExtResource("4_qt85d")]
-position = Vector2(635, 319)
-script = ExtResource("5_1lf2v")
+[node name="Collectable" parent="." instance=ExtResource("4_5ihur")]
+position = Vector2(441, 487)
+
+[node name="Collectable2" parent="." instance=ExtResource("4_5ihur")]
+position = Vector2(251, 203)
+
+[node name="Collectable3" parent="." instance=ExtResource("4_5ihur")]
+position = Vector2(680, 248)
+
+[node name="Collectable4" parent="." instance=ExtResource("4_5ihur")]
+position = Vector2(1096, 384)
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("5_0edbg")
