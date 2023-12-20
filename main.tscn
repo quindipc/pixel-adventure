@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bkl4jkrfysyee"]
+[gd_scene load_steps=10 format=3 uid="uid://bkl4jkrfysyee"]
 
 [ext_resource type="Texture2D" uid="uid://cvy2txqjqv4hq" path="res://assets/Pink.png" id="1_2f6yb"]
 [ext_resource type="Texture2D" uid="uid://gtcsc61qf7rk" path="res://assets/Terrain (16x16).png" id="2_s35f5"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ccc0egochv2or" path="res://scenes/collectable.tscn" id="4_5ihur"]
 [ext_resource type="Script" path="res://game_manager.gd" id="5_0edbg"]
 [ext_resource type="PackedScene" uid="uid://4cqr68jakvt3" path="res://scenes/finish.tscn" id="6_e6xff"]
+[ext_resource type="FontFile" uid="uid://2trltjec1ft8" path="res://assets/Xolonium-Regular.ttf" id="7_3k1ce"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mdtb2"]
 texture = ExtResource("2_s35f5")
@@ -573,7 +574,21 @@ scale = Vector2(1.5, 1.5)
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
-offset_left = 24.0
-offset_top = 16.0
-offset_right = 248.0
-offset_bottom = 112.0
+offset_left = 16.0
+offset_top = 15.0
+offset_right = 240.0
+offset_bottom = 111.0
+
+[node name="PointsLabel" type="Label" parent="UI/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_3k1ce")
+theme_override_font_sizes/font_size = 30
+text = "Points: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
